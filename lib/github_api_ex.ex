@@ -3,16 +3,10 @@ defmodule GithubApiEx do
   Documentation for GithubApiEx.
   """
 
-  @doc """
-  Hello world.
+  defstruct [:access_token]
+  @type t :: %__MODULE__{}
 
-  ## Examples
-
-      iex> GithubApiEx.hello
-      :world
-
-  """
-  def hello do
-    :world
-  end
+  @spec configure(access_token :: String.t | nil) :: t | nil
+  def configure(nil), do: nil
+  def configure(access_token), do: %__MODULE__{access_token: access_token}
 end
