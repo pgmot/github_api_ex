@@ -30,7 +30,8 @@ defmodule GithubApiEx.Mixfile do
   defp deps do
     [
       {:httpoison, "~> 0.11.1"},
-      {:poison, "~> 3.0"}
+      {:poison, "~> 3.0"},
+      {:mock, "~> 0.2.0", only: :test}
     ]
   end
 end
